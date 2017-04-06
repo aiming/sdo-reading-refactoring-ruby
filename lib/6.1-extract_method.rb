@@ -5,19 +5,22 @@ class ExtractMethod
   end
 
   def print_owing
-    outstanding = 0.0
-
     print_banner
 
-    # 勘定
-    @orders.each do |order|
-      outstanding += order.amount
-    end
+    outstanding = calculate_outstanding
 
     print_details outstanding
   end
 
   private
+
+  def calculate_outstanding
+    outstanding = 0.0
+    @orders.each do |order|
+      outstanding += order.amount
+    end
+    outstanding
+  end
 
   def print_banner
     puts "**********************"
