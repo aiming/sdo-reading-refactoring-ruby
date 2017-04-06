@@ -7,10 +7,7 @@ class ExtractMethod
   def print_owing
     outstanding = 0.0
 
-    # バナー
-    puts "**********************"
-    puts "****Customer Owes*****"
-    puts "**********************"
+    print_banner
 
     # 勘定
     @orders.each do |order|
@@ -20,5 +17,13 @@ class ExtractMethod
     # 詳細
     puts "name: #{@name}"
     puts "amount: #{outstanding}"
+  end
+
+  private
+
+  def print_banner
+    puts "**********************"
+    puts "****Customer Owes*****"
+    puts "**********************"
   end
 end
