@@ -12,6 +12,18 @@ class ExtractMethod
     print_details outstanding
   end
 
+  def print_owing2(previous_amount)
+    outstanding = previous_amount * 1.2
+
+    print_banner
+
+    @orders.each do |order|
+      outstanding += order.amount
+    end
+
+    print_details(outstanding)
+  end
+
   private
 
   def calculate_outstanding
