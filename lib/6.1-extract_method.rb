@@ -13,11 +13,9 @@ class ExtractMethod
   end
 
   def print_owing2(previous_amount)
-    outstanding = previous_amount * 1.2
-
     print_banner
 
-    outstanding = calculate_outstanding2(outstanding)
+    outstanding = calculate_outstanding2(previous_amount * 1.2)
 
     print_details(outstanding)
   end
