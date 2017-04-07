@@ -18,20 +18,4 @@ describe InlineMethod do
       end
     end
   end
-
-  describe '#more_than_five_late_deliveries' do
-    context 'when number of late deliveries greater than 5' do
-      it 'returns true' do
-        instance = InlineMethod.new(6)
-        expect(instance.more_than_five_late_deliveries).to eq true
-      end
-    end
-
-    context 'when number of late deliveries less than or equal 5' do
-      it 'returns false' do
-        instance = InlineMethod.new(5)
-        expect(instance.more_than_five_late_deliveries).to eq false
-      end
-    end
-  end
 end
