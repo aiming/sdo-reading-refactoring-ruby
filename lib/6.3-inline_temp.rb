@@ -7,6 +7,6 @@ class InlineTemp
 
   def order_base_price_greater_than_1000?
     base_price = an_order.base_price
-    return (base_price > 1000)
+    return (an_order.base_price > 1000)
   end
 end
