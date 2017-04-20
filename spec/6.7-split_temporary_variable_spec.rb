@@ -12,9 +12,9 @@ describe SplitTemporaryVariable do
     end
 
     context 'secondary_time > 0' do
-      it 'returns 162.5' do
+      it 'returns 50.0' do
         result = instance.distance_traveled(10)
-        expect(result).to eq 162.5
+        expect(result).to eq 50.0
       end
     end
   end
