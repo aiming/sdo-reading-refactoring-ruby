@@ -14,4 +14,10 @@ class Friend
     end
     return friends
   end
+
+  def found_friends2(people)
+    people.select do |person|
+      %w(Don John Kent).include? person
+    end
+  end
 end
